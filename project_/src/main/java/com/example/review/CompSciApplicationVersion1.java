@@ -1,4 +1,4 @@
-package main.java;
+package com.example.review;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
