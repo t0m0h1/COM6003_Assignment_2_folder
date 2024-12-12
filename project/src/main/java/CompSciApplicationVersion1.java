@@ -10,9 +10,6 @@ package main.java;
  *
  * @author J.Diockou
  */
-import javax.swing.*;
-import javax.swing.border.EmptyBorder;
-import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.sql.*;
@@ -21,6 +18,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import javax.swing.table.DefaultTableModel;
 
 // Custom document for restricting input (only letters and hyphens)
 class JTextFieldLimit extends javax.swing.text.PlainDocument {
