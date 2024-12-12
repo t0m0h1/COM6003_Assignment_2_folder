@@ -2,6 +2,7 @@
     "java.project.sourcePaths": ["src"],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
-        "lib/lib/junit-4.13.2.jar"
+        "test-lib/test-lib/junit-4.13.2.jar",
+        "test-lib1/**/*.jar"
     ]
 }
