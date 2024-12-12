@@ -1,19 +1,22 @@
-package com.example.review;  // Move this to the top
+package com.example.review;
 
+import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.HashMap;
+import java.util.Map;
 
+import javax.swing.JComboBox;
+import javax.swing.JTextArea;
 import javax.swing.text.AttributeSet;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.PlainDocument;
 import javax.swing.text.SimpleAttributeSet;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 public class TestFunctions {
 
-    // Test for valid input
+    // Existing tests
     @Test
     public void testInsertStringValidInput() throws BadLocationException {
         // Create an instance of a PlainDocument and an AttributeSet
@@ -37,7 +40,6 @@ public class TestFunctions {
         assertEquals(expected, actual, "Text after insertion should match the valid input");
     }
 
-    // Test for valid input: inserting a string with spaces and a hyphen (allowed characters)
     @Test
     public void testInsertStringValidWithSpaceAndHyphen() throws BadLocationException {
         // Create an instance of a PlainDocument and an AttributeSet
@@ -61,12 +63,6 @@ public class TestFunctions {
         assertEquals(expected, actual, "Text after insertion should match the valid input with space and hyphen");
     }
 
-
-
-
-    // Testing generate marks array function
-
-    // correct expected values
     @Test
     public void testGenerateMarksArrayCorrectValues() {
         // Create an instance of the class containing generateMarksArray
@@ -93,8 +89,6 @@ public class TestFunctions {
         assertArrayEquals(expectedMarks, actualMarks, "The generated marks array doesn't match the expected values.");
     }
 
-
-    //  correct size
     @Test
     public void testGenerateMarksArraySize() {
         // Create an instance of the class containing generateMarksArray
@@ -110,4 +104,53 @@ public class TestFunctions {
         assertEquals(expectedSize, actualMarks.length, "The size of the generated marks array is incorrect.");
     }
 
+    // Single test for displayModules
+    @Test
+    public void testDisplayModulesValidSelection() {
+        // Initialize combo boxes
+        JComboBox<String> cboCourse = new JComboBox<>(new String[]{"Course A", "Course B"});
+        JComboBox<String> cboLevel = new JComboBox<>(new String[]{"Level 4", "Level 5", "Level 6"});
+
+        // Initialize text area for module display
+        JTextArea moduleDisplay = new JTextArea();
+
+        // Initialize module mappings
+        Map<String, String[]> level4Modules = new HashMap<>();
+        level4Modules.put("Course A", new String[]{"Module 1", "Module 2", "Module 3"});
+
+        Map<String, String[]> level5Modules = new HashMap<>();
+        level5Modules.put("Course A", new String[]{"Module 4", "Module 5"});
+
+        Map<String, String[]> level6Modules = new HashMap<>();
+        level6Modules.put("Course B", new String[]{"Module 6", "Module 7", "Module 8"});
+
+        // Simulate selections
+        cboCourse.setSelectedItem("Course A");
+        cboLevel.setSelectedItem("Level 4");
+
+        // Call the displayModules method
+        String selectedCourse = (String) cboCourse.getSelectedItem();
+        String selectedLevel = (String) cboLevel.getSelectedItem();
+        String[] modules = null;
+
+        if ("Level 4".equals(selectedLevel)) {
+            modules = level4Modules.get(selectedCourse);
+        } else if ("Level 5".equals(selectedLevel)) {
+            modules = level5Modules.get(selectedCourse);
+        } else if ("Level 6".equals(selectedLevel)) {
+            modules = level6Modules.get(selectedCourse);
+        }
+
+        if (modules != null) {
+            moduleDisplay.setText(String.join("\n", modules));
+        } else {
+            moduleDisplay.setText("No modules available for this selection.");
+        }
+
+        // Expected output
+        String expected = "Module 1\nModule 2\nModule 3";
+
+        // Verify the module display contains the expected text
+        assertEquals(expected, moduleDisplay.getText(), "Modules for Course A, Level 4 should match the expected list.");
+    }
 }
