@@ -1,8 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: TestFunctions
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.002 s <<< FAILURE! - in TestFunctions
-TestFunctions  Time elapsed: 0.002 s  <<< ERROR!
-java.lang.TypeNotPresentException: Type PowerMockExtension not present
-Caused by: java.lang.ClassNotFoundException: PowerMockExtension
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.014 s <<< FAILURE! - in TestFunctions
+TestFunctions.testGenerateMarksArray  Time elapsed: 0.008 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The method generateMarksArray() from the type CompSciApplicationVersion1 is not visible
+
+	at TestFunctions.testGenerateMarksArray(TestFunctions.java:13)
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestFunctions" time="0.002" tests="1" errors="1" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestFunctions" time="0.014" tests="1" errors="1" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-3/project_/target/test-classes:/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-3/project_/target/classes:/Users/t-hh_macacct/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.0/junit-jupiter-api-5.7.0.jar:/Users/t-hh_macacct/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/t-hh_macacct/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/t-hh_macacct/.m2/repository/org/junit/platform/junit-platform-commons/1.7.0/junit-platform-commons-1.7.0.jar:/Users/t-hh_macacct/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.0/junit-jupiter-engine-5.7.0.jar:/Users/t-hh_macacct/.m2/repository/org/junit/platform/junit-platform-engine/1.7.0/junit-platform-engine-1.7.0.jar:/Users/t-hh_macacct/.m2/repository/org/powermock/powermock-api-mockito2/2.0.9/powermock-api-mockito2-2.0.9.jar:/Users/t-hh_macacct/.m2/repository/org/powermock/powermock-api-support/2.0.9/powermock-api-support-2.0.9.jar:/Users/t-hh_macacct/.m2/repository/org/powermock/powermock-reflect/2.0.9/powermock-reflect-2.0.9.jar:/Users/t-hh_macacct/.m2/repository/net/bytebuddy/byte-buddy/1.10.14/byte-buddy-1.10.14.jar:/Users/t-hh_macacct/.m2/repository/net/bytebuddy/byte-buddy-agent/1.10.14/byte-buddy-agent-1.10.14.jar:/Users/t-hh_macacct/.m2/repository/org/powermock/powermock-core/2.0.9/powermock-core-2.0.9.jar:/Users/t-hh_macacct/.m2/repository/org/javassist/javassist/3.27.0-GA/javassist-3.27.0-GA.jar:/Users/t-hh_macacct/.m2/repository/org/mockito/mockito-core/3.3.3/mockito-core-3.3.3.jar:/Users/t-hh_macacct/.m2/repository/org/objenesis/objenesis/2.6/objenesis-2.6.jar:/Users/t-hh_macacct/.m2/repository/org/powermock/powermock-module-junit4/2.0.9/powermock-module-junit4-2.0.9.jar:/Users/t-hh_macacct/.m2/repository/org/powermock/powermock-module-junit4-common/2.0.9/powermock-module-junit4-common-2.0.9.jar:/Users/t-hh_macacct/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/t-hh_macacct/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="java.class.path" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-3/project_/target/test-classes:/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-3/project_/target/classes:/Users/t-hh_macacct/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.0/junit-jupiter-api-5.7.0.jar:/Users/t-hh_macacct/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/t-hh_macacct/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/t-hh_macacct/.m2/repository/org/junit/platform/junit-platform-commons/1.7.0/junit-platform-commons-1.7.0.jar:/Users/t-hh_macacct/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.0/junit-jupiter-engine-5.7.0.jar:/Users/t-hh_macacct/.m2/repository/org/junit/platform/junit-platform-engine/1.7.0/junit-platform-engine-1.7.0.jar:"/>
     <property name="java.vm.vendor" value="Eclipse Adoptium"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://adoptium.net/"/>
@@ -12,11 +12,11 @@
     <property name="user.country" value="GB"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-3/project_/target/surefire/surefirebooter6205942140239769964.jar /Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-3/project_/target/surefire 2024-12-12T21-45-18_149-jvmRun1 surefire9866032282107779664tmp surefire_08970946259793946407tmp"/>
+    <property name="sun.java.command" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-3/project_/target/surefire/surefirebooter15304669887923265474.jar /Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-3/project_/target/surefire 2024-12-12T22-07-20_799-jvmRun1 surefire1658809919279602033tmp surefire_05461028886379545354tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
-    <property name="test" value="TestFunctions"/>
-    <property name="surefire.test.class.path" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-3/project_/target/test-classes:/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-3/project_/target/classes:/Users/t-hh_macacct/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.0/junit-jupiter-api-5.7.0.jar:/Users/t-hh_macacct/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/t-hh_macacct/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/t-hh_macacct/.m2/repository/org/junit/platform/junit-platform-commons/1.7.0/junit-platform-commons-1.7.0.jar:/Users/t-hh_macacct/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.0/junit-jupiter-engine-5.7.0.jar:/Users/t-hh_macacct/.m2/repository/org/junit/platform/junit-platform-engine/1.7.0/junit-platform-engine-1.7.0.jar:/Users/t-hh_macacct/.m2/repository/org/powermock/powermock-api-mockito2/2.0.9/powermock-api-mockito2-2.0.9.jar:/Users/t-hh_macacct/.m2/repository/org/powermock/powermock-api-support/2.0.9/powermock-api-support-2.0.9.jar:/Users/t-hh_macacct/.m2/repository/org/powermock/powermock-reflect/2.0.9/powermock-reflect-2.0.9.jar:/Users/t-hh_macacct/.m2/repository/net/bytebuddy/byte-buddy/1.10.14/byte-buddy-1.10.14.jar:/Users/t-hh_macacct/.m2/repository/net/bytebuddy/byte-buddy-agent/1.10.14/byte-buddy-agent-1.10.14.jar:/Users/t-hh_macacct/.m2/repository/org/powermock/powermock-core/2.0.9/powermock-core-2.0.9.jar:/Users/t-hh_macacct/.m2/repository/org/javassist/javassist/3.27.0-GA/javassist-3.27.0-GA.jar:/Users/t-hh_macacct/.m2/repository/org/mockito/mockito-core/3.3.3/mockito-core-3.3.3.jar:/Users/t-hh_macacct/.m2/repository/org/objenesis/objenesis/2.6/objenesis-2.6.jar:/Users/t-hh_macacct/.m2/repository/org/powermock/powermock-module-junit4/2.0.9/powermock-module-junit4-2.0.9.jar:/Users/t-hh_macacct/.m2/repository/org/powermock/powermock-module-junit4-common/2.0.9/powermock-module-junit4-common-2.0.9.jar:/Users/t-hh_macacct/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/t-hh_macacct/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="test" value="TestFunctions#testGenerateMarksArray"/>
+    <property name="surefire.test.class.path" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-3/project_/target/test-classes:/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-3/project_/target/classes:/Users/t-hh_macacct/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.0/junit-jupiter-api-5.7.0.jar:/Users/t-hh_macacct/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/t-hh_macacct/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/t-hh_macacct/.m2/repository/org/junit/platform/junit-platform-commons/1.7.0/junit-platform-commons-1.7.0.jar:/Users/t-hh_macacct/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.0/junit-jupiter-engine-5.7.0.jar:/Users/t-hh_macacct/.m2/repository/org/junit/platform/junit-platform-engine/1.7.0/junit-platform-engine-1.7.0.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/t-hh_macacct"/>
     <property name="user.language" value="en"/>
@@ -30,7 +30,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-3/project_/target/surefire/surefirebooter6205942140239769964.jar"/>
+    <property name="surefire.real.class.path" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-3/project_/target/surefire/surefirebooter15304669887923265474.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="21.0.1+12-LTS"/>
@@ -60,9 +60,12 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="" classname="TestFunctions" time="0.002">
-    <error type="java.lang.TypeNotPresentException"><![CDATA[java.lang.TypeNotPresentException: Type PowerMockExtension not present
-Caused by: java.lang.ClassNotFoundException: PowerMockExtension
+  <testcase name="testGenerateMarksArray" classname="TestFunctions" time="0.008">
+    <error type="java.lang.Error"><![CDATA[java.lang.Error: 
+Unresolved compilation problem: 
+	The method generateMarksArray() from the type CompSciApplicationVersion1 is not visible
+
+	at TestFunctions.testGenerateMarksArray(TestFunctions.java:13)
 ]]></error>
   </testcase>
 </testsuite>
