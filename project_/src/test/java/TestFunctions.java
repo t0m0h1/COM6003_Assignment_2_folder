@@ -8,12 +8,12 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.powermock.api.mockito.PowerMockito;
+import org.powermock.modules.junit.jupiter.PowerMockExtension;
+import org.junit.jupiter.api.extension.ExtendWith;
 
-// Assuming that the class being tested is CompSciApplicationVersion1
+@ExtendWith(PowerMockExtension.class)
 public class TestFunctions {
-
-    @Mock
-    private JOptionPane mockJOptionPane;  // Mock JOptionPane for user inputs
 
     @BeforeEach
     public void setup() {
@@ -22,9 +22,8 @@ public class TestFunctions {
 
     @Test
     public void testInitializeModules() {
-        // Create an instance of your app
         CompSciApplicationVersion1 app = new CompSciApplicationVersion1();
-        
+
         // Ensure the maps have been initialized correctly
         assertEquals(3, app.level4Modules.size());
         assertEquals(3, app.level5Modules.size());
@@ -42,13 +41,12 @@ public class TestFunctions {
     @Test
     public void testAddStudent() {
         // Mock JOptionPane to simulate user input for adding a student
-        when(mockJOptionPane.showInputDialog(anyString()))
+        PowerMockito.mockStatic(JOptionPane.class);
+        when(JOptionPane.showInputDialog(anyString()))
             .thenReturn("STID1234", "John", "Doe", "123 Main St", "01/01/2000", "07987654321", "johndoe@example.com", "Male", "BSc Computer Science", "Level 4");
 
         // Create the app instance and simulate button click
         CompSciApplicationVersion1 app = new CompSciApplicationVersion1();
-
-        // Simulate the button click to add a student
         app.btnAddActionPerformed(null);
 
         // Verify student details in studentList
@@ -60,5 +58,4 @@ public class TestFunctions {
         TableModel tableModel = app.jTable1.getModel();
         assertEquals(1, tableModel.getRowCount());
     }
-
 }
