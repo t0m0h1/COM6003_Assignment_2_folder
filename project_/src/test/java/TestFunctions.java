@@ -1,46 +1,64 @@
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
 
 import javax.swing.JOptionPane;
 import javax.swing.table.TableModel;
 
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
-// import CompSciApplicationVersion1.*;
-
+// Assuming that the class being tested is CompSciApplicationVersion1
 public class TestFunctions {
+
+    @Mock
+    private JOptionPane mockJOptionPane;  // Mock JOptionPane for user inputs
+
+    @BeforeEach
+    public void setup() {
+        MockitoAnnotations.openMocks(this); // Initialize mocks
+    }
 
     @Test
     public void testInitializeModules() {
+        // Create an instance of your app
         CompSciApplicationVersion1 app = new CompSciApplicationVersion1();
+        
+        // Ensure the maps have been initialized correctly
         assertEquals(3, app.level4Modules.size());
         assertEquals(3, app.level5Modules.size());
         assertEquals(3, app.level6Modules.size());
-    
+
         // Check module names for a specific course and level
         String[] level4CSModules = app.level4Modules.get("BSc Computer Science");
-        assertArrayEquals(new String[]{"Programming Fundamentals", "Data Structures and Algorithms", "Computer Networks"}, level4CSModules);
+        assertArrayEquals(new String[]{
+                "Programming Fundamentals", 
+                "Data Structures and Algorithms", 
+                "Computer Networks"
+        }, level4CSModules);
     }
 
-
-
-    // Testing pressing add student button 
     @Test
-public void testAddStudent() {
-    // Mock JOptionPane to simulate user input
-    when(JOptionPane.showInputDialog(anyString())).thenReturn("STID1234", "John", "Doe", "123 Main St", "01/01/2000", "07987654321", "johndoe@example.com", "Male", "BSc Computer Science", "Level 4");
+    public void testAddStudent() {
+        // Mock JOptionPane to simulate user input for adding a student
+        when(mockJOptionPane.showInputDialog(anyString()))
+            .thenReturn("STID1234", "John", "Doe", "123 Main St", "01/01/2000", "07987654321", "johndoe@example.com", "Male", "BSc Computer Science", "Level 4");
 
-    CompSciApplicationVersion1 app = new CompSciApplicationVersion1();
-    app.btnAddActionPerformed(null);
+        // Create the app instance and simulate button click
+        CompSciApplicationVersion1 app = new CompSciApplicationVersion1();
 
-    // Verify student details in studentList and tableModel
-    assertEquals(1, app.studentList.size());
-    Student student = app.studentList.get(0);
-    assertEquals("STID1234", student.studentID);
+        // Simulate the button click to add a student
+        app.btnAddActionPerformed(null);
 
+        // Verify student details in studentList
+        assertEquals(1, app.studentList.size());
+        Student student = app.studentList.get(0);
+        assertEquals("STID1234", student.studentID);
 
-    TableModel tableModel = app.jTable1.getModel();
-    assertEquals(1, tableModel.getRowCount());
-
-}
+        // Verify JTable model updates correctly
+        TableModel tableModel = app.jTable1.getModel();
+        assertEquals(1, tableModel.getRowCount());
+    }
 
 }
