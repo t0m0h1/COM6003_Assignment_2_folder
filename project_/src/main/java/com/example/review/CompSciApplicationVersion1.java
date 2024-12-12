@@ -234,7 +234,7 @@ public class CompSciApplicationVersion1 extends JFrame {
         }
     }
 
-    private Integer[] generateMarksArray() {
+    protected Integer[] generateMarksArray() {
         Integer[] marks = new Integer[]{
             2, 5, 8,    // First band
             12, 15, 18, // Second band
