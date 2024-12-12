@@ -93,7 +93,7 @@ public class TestFunctions {
         assertArrayEquals(expectedMarks, actualMarks, "The generated marks array doesn't match the expected values.");
     }
 
-    
+
     //  correct size
     @Test
     public void testGenerateMarksArraySize() {
@@ -109,12 +109,5 @@ public class TestFunctions {
         // Verify that the generated array has the correct size
         assertEquals(expectedSize, actualMarks.length, "The size of the generated marks array is incorrect.");
     }
-
-
-
-
-
-
-
 
 }
