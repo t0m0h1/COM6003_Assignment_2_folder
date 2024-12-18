@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.review.TestFunctions" time="0.948" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.review.TestFunctions" time="0.97" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="sun.awt.enableExtraMouseButtons" value="true"/>
-    <property name="java.class.path" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-4/project_/target/test-classes:/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-4/project_/target/classes:/Users/t-hh_macacct/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/Users/t-hh_macacct/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/t-hh_macacct/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/Users/t-hh_macacct/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/t-hh_macacct/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/Users/t-hh_macacct/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:/Users/t-hh_macacct/.m2/repository/org/xerial/sqlite-jdbc/3.36.0.3/sqlite-jdbc-3.36.0.3.jar:"/>
+    <property name="java.class.path" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-5/project_/target/test-classes:/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-5/project_/target/classes:/Users/t-hh_macacct/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/Users/t-hh_macacct/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/t-hh_macacct/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/Users/t-hh_macacct/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/t-hh_macacct/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/Users/t-hh_macacct/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:/Users/t-hh_macacct/.m2/repository/org/xerial/sqlite-jdbc/3.36.0.3/sqlite-jdbc-3.36.0.3.jar:"/>
     <property name="java.vm.vendor" value="Eclipse Adoptium"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://adoptium.net/"/>
@@ -14,11 +14,11 @@
     <property name="user.country" value="GB"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-4/project_/target/surefire/surefirebooter14475080932472366503.jar /Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-4/project_/target/surefire 2024-12-12T22-50-45_422-jvmRun1 surefire17029973756097288029tmp surefire_06230669081887095968tmp"/>
+    <property name="sun.java.command" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-5/project_/target/surefire/surefirebooter8721838839696158442.jar /Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-5/project_/target/surefire 2024-12-18T21-27-52_374-jvmRun1 surefire9814497281440666656tmp surefire_012575653280452987836tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="com.example.review.TestFunctions"/>
-    <property name="surefire.test.class.path" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-4/project_/target/test-classes:/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-4/project_/target/classes:/Users/t-hh_macacct/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/Users/t-hh_macacct/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/t-hh_macacct/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/Users/t-hh_macacct/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/t-hh_macacct/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/Users/t-hh_macacct/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:/Users/t-hh_macacct/.m2/repository/org/xerial/sqlite-jdbc/3.36.0.3/sqlite-jdbc-3.36.0.3.jar:"/>
+    <property name="surefire.test.class.path" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-5/project_/target/test-classes:/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-5/project_/target/classes:/Users/t-hh_macacct/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/Users/t-hh_macacct/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/t-hh_macacct/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/Users/t-hh_macacct/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/t-hh_macacct/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/Users/t-hh_macacct/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:/Users/t-hh_macacct/.m2/repository/org/xerial/sqlite-jdbc/3.36.0.3/sqlite-jdbc-3.36.0.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/t-hh_macacct"/>
     <property name="user.language" value="en"/>
@@ -26,13 +26,13 @@
     <property name="java.version.date" value="2023-10-17"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home"/>
     <property name="file.separator" value="/"/>
-    <property name="basedir" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-4/project_"/>
+    <property name="basedir" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-5/project_"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-4/project_/target/surefire/surefirebooter14475080932472366503.jar"/>
+    <property name="surefire.real.class.path" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-5/project_/target/surefire/surefirebooter8721838839696158442.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="21.0.1+12-LTS"/>
@@ -49,7 +49,7 @@
     <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
     <property name="java.io.tmpdir" value="/var/folders/f1/p4cf4cmd4p16g82_wbklt_000000gn/T/"/>
     <property name="java.version" value="21.0.1"/>
-    <property name="user.dir" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-4/project_"/>
+    <property name="user.dir" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-5/project_"/>
     <property name="os.arch" value="aarch64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="native.encoding" value="UTF-8"/>
@@ -62,8 +62,47 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testInsertStringValidWithSpaceAndHyphen" classname="com.example.review.TestFunctions" time="0.148"/>
-  <testcase name="testGenerateMarksArrayCorrectValues" classname="com.example.review.TestFunctions" time="0.628"/>
+  <testcase name="testInsertStringValidWithSpaceAndHyphen" classname="com.example.review.TestFunctions" time="0.152"/>
+  <testcase name="testGenerateMarksArrayCorrectValues" classname="com.example.review.TestFunctions" time="0.644"/>
   <testcase name="testInsertStringValidInput" classname="com.example.review.TestFunctions" time="0.001"/>
-  <testcase name="testGenerateMarksArraySize" classname="com.example.review.TestFunctions" time="0.164"/>
+  <testcase name="testDisplayModulesValidSelection" classname="com.example.review.TestFunctions" time="0.081"/>
+  <testcase name="testGenerateMarksArraySize" classname="com.example.review.TestFunctions" time="0.083">
+    <system-err><![CDATA[Exception in thread "AWT-EventQueue-0" java.lang.NullPointerException: Cannot invoke "javax.swing.plaf.synth.SynthStyle.getPainter(javax.swing.plaf.synth.SynthContext)" because the return value of "javax.swing.plaf.synth.SynthContext.getStyle()" is null
+	at java.desktop/javax.swing.plaf.synth.SynthContext.getPainter(SynthContext.java:151)
+	at java.desktop/javax.swing.plaf.synth.SynthLabelUI.update(SynthLabelUI.java:178)
+	at java.desktop/javax.swing.JComponent.paintComponent(JComponent.java:852)
+	at java.desktop/javax.swing.JComponent.paint(JComponent.java:1128)
+	at java.desktop/javax.swing.border.TitledBorder.paintBorder(TitledBorder.java:365)
+	at java.desktop/javax.swing.JComponent.paintBorder(JComponent.java:1021)
+	at java.desktop/javax.swing.JComponent.paint(JComponent.java:1129)
+	at java.desktop/javax.swing.JComponent.paintToOffscreen(JComponent.java:5318)
+	at java.desktop/javax.swing.RepaintManager$PaintManager.paintDoubleBufferedImpl(RepaintManager.java:1656)
+	at java.desktop/javax.swing.RepaintManager$PaintManager.paintDoubleBuffered(RepaintManager.java:1631)
+	at java.desktop/javax.swing.RepaintManager$PaintManager.paint(RepaintManager.java:1569)
+	at java.desktop/javax.swing.RepaintManager.paint(RepaintManager.java:1336)
+	at java.desktop/javax.swing.JComponent._paintImmediately(JComponent.java:5266)
+	at java.desktop/javax.swing.JComponent.paintImmediately(JComponent.java:5076)
+	at java.desktop/javax.swing.RepaintManager$4.run(RepaintManager.java:878)
+	at java.desktop/javax.swing.RepaintManager$4.run(RepaintManager.java:861)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/javax.swing.RepaintManager.paintDirtyRegions(RepaintManager.java:861)
+	at java.desktop/javax.swing.RepaintManager.paintDirtyRegions(RepaintManager.java:834)
+	at java.desktop/javax.swing.RepaintManager.prePaintDirtyRegions(RepaintManager.java:784)
+	at java.desktop/javax.swing.RepaintManager$ProcessingRunnable.run(RepaintManager.java:1897)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+]]></system-err>
+  </testcase>
 </testsuite>

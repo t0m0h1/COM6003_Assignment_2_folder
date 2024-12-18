@@ -1,7 +1,5 @@
 package com.example.review;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -12,6 +10,8 @@ import javax.swing.text.BadLocationException;
 import javax.swing.text.PlainDocument;
 import javax.swing.text.SimpleAttributeSet;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 public class TestFunctions {
@@ -153,4 +153,157 @@ public class TestFunctions {
         // Verify the module display contains the expected text
         assertEquals(expected, moduleDisplay.getText(), "Modules for Course A, Level 4 should match the expected list.");
     }
+
+
+    // Existing test cases here
+
+// Additional Test Cases
+
+// Test Cases for displayModules
+@Test
+public void testDisplayModules_validCourseAndLevel() {
+    // Test if the correct modules are displayed for a valid course and level selection.
+}
+
+@Test
+public void testDisplayModules_invalidSelection() {
+    // Test when an invalid course or level is selected, ensuring the output is "No modules available for this selection."
+}
+
+@Test
+public void testDisplayModules_nullOrEmptySelection() {
+    // Test if null or empty selections for course or level are handled gracefully without crashing.
+}
+
+// Test Cases for btnCalculateActionPerformed
+@Test
+public void testBtnCalculateActionPerformed_averageCalculationLevel4And5() {
+    // Test the calculation of total and average marks for valid Level 4 and Level 5 data.
+}
+
+@Test
+public void testBtnCalculateActionPerformed_zeroMarksHandling() {
+    // Ensure that zero marks for all modules are handled correctly, with the average calculated as zero.
+}
+
+@Test
+public void testBtnCalculateActionPerformed_degreeClassificationLevel6() {
+    // Test various edge cases for Level 6 to ensure correct degree classification.
+    // Example: Marks average is exactly on the boundary (e.g., 70, 65, 60, 40).
+}
+
+@Test
+public void testBtnCalculateActionPerformed_nullOrMissingMarks() {
+    // Test cases where some marks are not selected (null) and ensure the behavior is appropriate.
+}
+
+// Test Cases for btnAddActionPerformed
+@Test
+public void testBtnAddActionPerformed_successfulAddition() {
+    // Test successful addition of a student with valid input.
+}
+
+@Test
+public void testBtnAddActionPerformed_duplicateStudentID() {
+    // Ensure an appropriate error message is displayed when a duplicate Student ID is entered.
+}
+
+@Test
+public void testBtnAddActionPerformed_missingFields() {
+    // Validate that the method does not proceed if required fields are missing or invalid.
+}
+
+@Test
+public void testBtnAddActionPerformed_invalidMarksArray() {
+    // Test behavior when marks array contains invalid or missing values.
+}
+
+// Test Cases for validateInput
+@Test
+public void testValidateInput_validData() {
+    // Provide fully valid data and ensure the method returns true.
+}
+
+@Test
+public void testValidateInput_invalidStudentID() {
+    // Test with incorrectly formatted Student IDs, such as missing "STID" prefix or incorrect length.
+}
+
+@Test
+public void testValidateInput_invalidEmailAddress() {
+    // Test various invalid email formats (e.g., missing @, missing domain).
+}
+
+@Test
+public void testValidateInput_invalidNameFormat() {
+    // Test names containing non-alphabetic characters or not capitalized.
+}
+
+@Test
+public void testValidateInput_invalidDOBFormat() {
+    // Ensure validateInput catches incorrect formats for the date of birth.
+}
+
+@Test
+public void testValidateInput_invalidMobileNumber() {
+    // Test mobile numbers not conforming to the UK format.
+}
+
+// Test Cases for btnRemoveActionPerformed
+@Test
+public void testBtnRemoveActionPerformed_successfulRemoval() {
+    // Test removal of a valid student entry.
+}
+
+@Test
+public void testBtnRemoveActionPerformed_noRowSelected() {
+    // Ensure the correct error message is displayed if no row is selected.
+}
+
+@Test
+public void testBtnRemoveActionPerformed_databaseDeletionVerification() {
+    // Test that the corresponding database entry is removed for the deleted student.
+}
+
+// Test Cases for btnBackupActionPerformed
+@Test
+public void testBtnBackupActionPerformed_successfulBackup() {
+    // Ensure all student data is correctly inserted into the database.
+}
+
+@Test
+public void testBtnBackupActionPerformed_emptyStudentList() {
+    // Test that the method handles an empty student list gracefully.
+}
+
+@Test
+public void testBtnBackupActionPerformed_databaseConnectionFailure() {
+    // Simulate a database connection failure and verify the error handling mechanism.
+}
+
+// Test Cases for btnResetActionPerformed
+@Test
+public void testBtnResetActionPerformed_successfulReset() {
+    // Test that all fields and dropdowns are reset to their initial states.
+}
+
+@Test
+public void testBtnResetActionPerformed_resultsDisplayCleared() {
+    // Verify that the results display is also cleared during reset.
+}
+
+// Test Cases for isStudentIDExist
+@Test
+public void testIsStudentIDExist_existingID() {
+    // Test with a Student ID already present in the list.
+}
+
+@Test
+public void testIsStudentIDExist_nonExistingID() {
+    // Ensure the method correctly returns false when the Student ID is not found.
+}
+
+
+
+    
 }
