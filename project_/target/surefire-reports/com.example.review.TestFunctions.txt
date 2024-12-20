@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.example.review.TestFunctions
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.267 s <<< FAILURE! - in com.example.review.TestFunctions
-com.example.review.TestFunctions.testValidateInput_validData  Time elapsed: 0.616 s  <<< FAILURE!
+Tests run: 8, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.031 s <<< FAILURE! - in com.example.review.TestFunctions
+com.example.review.TestFunctions.testValidateInput_validData  Time elapsed: 0.563 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Valid input should return true. ==> expected: <true> but was: <false>
-	at com.example.review.TestFunctions.testValidateInput_validData(TestFunctions.java:224)
+	at com.example.review.TestFunctions.testValidateInput_validData(TestFunctions.java:135)
 
