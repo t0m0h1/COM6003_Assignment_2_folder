@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.review.TestFunctions" time="0.991" tests="8" errors="2" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.review.TestFunctions" time="2.267" tests="8" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -14,7 +14,7 @@
     <property name="user.country" value="GB"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-5/project_/target/surefire/surefirebooter2777267084097475911.jar /Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-5/project_/target/surefire 2024-12-20T01-20-43_208-jvmRun1 surefire501314920242714578tmp surefire_05646169020328645925tmp"/>
+    <property name="sun.java.command" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-5/project_/target/surefire/surefirebooter6815554717454511686.jar /Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-5/project_/target/surefire 2024-12-20T01-31-05_851-jvmRun1 surefire5261950489995043866tmp surefire_011451815496155297749tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="com.example.review.TestFunctions"/>
@@ -32,7 +32,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-5/project_/target/surefire/surefirebooter2777267084097475911.jar"/>
+    <property name="surefire.real.class.path" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-5/project_/target/surefire/surefirebooter6815554717454511686.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="21.0.1+12-LTS"/>
@@ -62,40 +62,54 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testInsertStringValidWithSpaceAndHyphen" classname="com.example.review.TestFunctions" time="0.148"/>
-  <testcase name="testGenerateMarksArrayCorrectValues" classname="com.example.review.TestFunctions" time="0.654"/>
-  <testcase name="testValidateInput_invalidStudentID" classname="com.example.review.TestFunctions" time="0.002">
-    <error type="java.lang.Error"><![CDATA[java.lang.Error: 
-Unresolved compilation problems: 
-	jtxtStudentID cannot be resolved
-	jtxtEmail cannot be resolved
-	jtxtFirstname cannot be resolved
-	jtxtLastname cannot be resolved
-	jtxtAddress cannot be resolved
-	jtxtDOB cannot be resolved
-	jtxtMobile cannot be resolved
-	The method validateInput() from the type CompSciApplicationVersion1 is not visible
-
-	at com.example.review.TestFunctions.testValidateInput_invalidStudentID(TestFunctions.java:272)
-]]></error>
+  <testcase name="testInsertStringValidWithSpaceAndHyphen" classname="com.example.review.TestFunctions" time="0.157"/>
+  <testcase name="testGenerateMarksArrayCorrectValues" classname="com.example.review.TestFunctions" time="0.646"/>
+  <testcase name="testValidateInput_invalidStudentID" classname="com.example.review.TestFunctions" time="0.765">
+    <system-err><![CDATA[Exception in thread "AWT-EventQueue-0" java.lang.NullPointerException: Cannot invoke "javax.swing.plaf.synth.SynthStyle.getPainter(javax.swing.plaf.synth.SynthContext)" because the return value of "javax.swing.plaf.synth.SynthContext.getStyle()" is null
+	at java.desktop/javax.swing.plaf.synth.SynthContext.getPainter(SynthContext.java:151)
+	at java.desktop/javax.swing.plaf.synth.SynthLabelUI.update(SynthLabelUI.java:178)
+	at java.desktop/javax.swing.JComponent.paintComponent(JComponent.java:852)
+	at java.desktop/javax.swing.JComponent.paint(JComponent.java:1128)
+	at java.desktop/javax.swing.border.TitledBorder.paintBorder(TitledBorder.java:365)
+	at java.desktop/javax.swing.JComponent.paintBorder(JComponent.java:1021)
+	at java.desktop/javax.swing.JComponent.paint(JComponent.java:1129)
+	at java.desktop/javax.swing.JComponent.paintToOffscreen(JComponent.java:5318)
+	at java.desktop/javax.swing.RepaintManager$PaintManager.paintDoubleBufferedImpl(RepaintManager.java:1656)
+	at java.desktop/javax.swing.RepaintManager$PaintManager.paintDoubleBuffered(RepaintManager.java:1631)
+	at java.desktop/javax.swing.RepaintManager$PaintManager.paint(RepaintManager.java:1569)
+	at java.desktop/javax.swing.RepaintManager.paint(RepaintManager.java:1336)
+	at java.desktop/javax.swing.JComponent._paintImmediately(JComponent.java:5266)
+	at java.desktop/javax.swing.JComponent.paintImmediately(JComponent.java:5076)
+	at java.desktop/javax.swing.RepaintManager$4.run(RepaintManager.java:878)
+	at java.desktop/javax.swing.RepaintManager$4.run(RepaintManager.java:861)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/javax.swing.RepaintManager.paintDirtyRegions(RepaintManager.java:861)
+	at java.desktop/javax.swing.RepaintManager.paintDirtyRegions(RepaintManager.java:834)
+	at java.desktop/javax.swing.RepaintManager.prePaintDirtyRegions(RepaintManager.java:784)
+	at java.desktop/javax.swing.RepaintManager$ProcessingRunnable.run(RepaintManager.java:1897)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+]]></system-err>
   </testcase>
-  <testcase name="testInsertStringValidInput" classname="com.example.review.TestFunctions" time="0.001"/>
-  <testcase name="testDisplayModulesValidSelection" classname="com.example.review.TestFunctions" time="0.107"/>
-  <testcase name="testValidateInput_validData" classname="com.example.review.TestFunctions" time="0.002">
-    <error type="java.lang.Error"><![CDATA[java.lang.Error: 
-Unresolved compilation problems: 
-	The method setStudentIDField(JTextField) is undefined for the type CompSciApplicationVersion1
-	The method setEmailField(JTextField) is undefined for the type CompSciApplicationVersion1
-	The method setFirstnameField(JTextField) is undefined for the type CompSciApplicationVersion1
-	The method setLastnameField(JTextField) is undefined for the type CompSciApplicationVersion1
-	The method setAddressField(JTextField) is undefined for the type CompSciApplicationVersion1
-	The method setDOBField(JTextField) is undefined for the type CompSciApplicationVersion1
-	The method setMobileField(JTextField) is undefined for the type CompSciApplicationVersion1
-	The method validateInput() from the type CompSciApplicationVersion1 is not visible
-
-	at com.example.review.TestFunctions.testValidateInput_validData(TestFunctions.java:239)
-]]></error>
+  <testcase name="testInsertStringValidInput" classname="com.example.review.TestFunctions" time="0.002"/>
+  <testcase name="testDisplayModulesValidSelection" classname="com.example.review.TestFunctions" time="0.01"/>
+  <testcase name="testValidateInput_validData" classname="com.example.review.TestFunctions" time="0.616">
+    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Valid input should return true. ==> expected: <true> but was: <false>
+	at com.example.review.TestFunctions.testValidateInput_validData(TestFunctions.java:224)
+]]></failure>
   </testcase>
-  <testcase name="testDisplayModules_emptyModulesArray" classname="com.example.review.TestFunctions" time="0.006"/>
-  <testcase name="testGenerateMarksArraySize" classname="com.example.review.TestFunctions" time="0.059"/>
+  <testcase name="testDisplayModules_emptyModulesArray" classname="com.example.review.TestFunctions" time="0.005"/>
+  <testcase name="testGenerateMarksArraySize" classname="com.example.review.TestFunctions" time="0.049"/>
 </testsuite>

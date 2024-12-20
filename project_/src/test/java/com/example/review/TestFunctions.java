@@ -1,14 +1,13 @@
 package com.example.review;
 
+
+
+import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
-import java.lang.reflect.Method;
-
-
 
 import javax.swing.JComboBox;
 import javax.swing.JTextArea;
-import javax.swing.JTextField;
 import javax.swing.text.AttributeSet;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.PlainDocument;
@@ -18,8 +17,9 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import org.junit.jupiter.api.Test;
+
+
 
 public class TestFunctions {
 
@@ -227,33 +227,21 @@ public void testValidateInput_validData() throws Exception {
 
 
 
-
-
-
-
-
-
 @Test
-public void testValidateInput_invalidStudentID() {
-    // Simulate filling out the fields with invalid student ID
-    jtxtStudentID.setText("12345");  // Invalid format (should be "STID####")
-    jtxtEmail.setText("student@example.com");
-    jtxtFirstname.setText("John");
-    jtxtLastname.setText("Doe");
-    jtxtAddress.setText("123 Main Street, City");
-    jtxtDOB.setText("01/01/2000");
-    jtxtMobile.setText("07123456789");
-
-    // Create an instance of CompSciApplicationVersion1 and call the validateInput method
+public void testValidateInput_invalidStudentID() throws Exception {
+    // Create an instance of CompSciApplicationVersion1
     CompSciApplicationVersion1 app = new CompSciApplicationVersion1();
 
-    // Call the validateInput method to check the validation
-    boolean isValid = app.validateInput();
+    // Use reflection to access the private method
+    Method method = CompSciApplicationVersion1.class.getDeclaredMethod("validateInput");
+    method.setAccessible(true);  // Make the private method accessible
 
-    // Assert that the validation returns false for an invalid Student ID
+    // Call the method
+    boolean isValid = (boolean) method.invoke(app);
+
+    // Assert that the validation returns false for invalid student ID
     assertFalse(isValid, "Invalid student ID should return false.");
 }
-
 
 
 }

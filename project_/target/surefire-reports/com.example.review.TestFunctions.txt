@@ -1,32 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.example.review.TestFunctions
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.991 s <<< FAILURE! - in com.example.review.TestFunctions
-com.example.review.TestFunctions.testValidateInput_invalidStudentID  Time elapsed: 0.002 s  <<< ERROR!
-java.lang.Error: 
-Unresolved compilation problems: 
-	jtxtStudentID cannot be resolved
-	jtxtEmail cannot be resolved
-	jtxtFirstname cannot be resolved
-	jtxtLastname cannot be resolved
-	jtxtAddress cannot be resolved
-	jtxtDOB cannot be resolved
-	jtxtMobile cannot be resolved
-	The method validateInput() from the type CompSciApplicationVersion1 is not visible
-
-	at com.example.review.TestFunctions.testValidateInput_invalidStudentID(TestFunctions.java:272)
-
-com.example.review.TestFunctions.testValidateInput_validData  Time elapsed: 0.002 s  <<< ERROR!
-java.lang.Error: 
-Unresolved compilation problems: 
-	The method setStudentIDField(JTextField) is undefined for the type CompSciApplicationVersion1
-	The method setEmailField(JTextField) is undefined for the type CompSciApplicationVersion1
-	The method setFirstnameField(JTextField) is undefined for the type CompSciApplicationVersion1
-	The method setLastnameField(JTextField) is undefined for the type CompSciApplicationVersion1
-	The method setAddressField(JTextField) is undefined for the type CompSciApplicationVersion1
-	The method setDOBField(JTextField) is undefined for the type CompSciApplicationVersion1
-	The method setMobileField(JTextField) is undefined for the type CompSciApplicationVersion1
-	The method validateInput() from the type CompSciApplicationVersion1 is not visible
-
-	at com.example.review.TestFunctions.testValidateInput_validData(TestFunctions.java:239)
+Tests run: 8, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.267 s <<< FAILURE! - in com.example.review.TestFunctions
+com.example.review.TestFunctions.testValidateInput_validData  Time elapsed: 0.616 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Valid input should return true. ==> expected: <true> but was: <false>
+	at com.example.review.TestFunctions.testValidateInput_validData(TestFunctions.java:224)
 
