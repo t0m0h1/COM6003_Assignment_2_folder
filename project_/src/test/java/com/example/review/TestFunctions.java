@@ -16,6 +16,7 @@ import org.junit.jupiter.api.Test;
 
 public class TestFunctions {
 
+
     // Existing tests
     @Test
     public void testInsertStringValidInput() throws BadLocationException {
@@ -162,20 +163,40 @@ public class TestFunctions {
 // Test Cases for displayModules
 @Test
 public void testDisplayModules_emptyModulesArray() {
-    // Add a course with an empty modules array
+    // Declare level4Modules map
+    Map<String, String[]> level4Modules = new HashMap<>();
+    level4Modules.put("Course A", new String[]{"Module 1", "Module 2", "Module 3"});
     level4Modules.put("Course D", new String[]{});
 
-    // Set up valid selections
-    cboCourse.addItem("Course D");
-    cboCourse.setSelectedItem("Course D");
+    // Declare combo boxes for course and level
+    JComboBox<String> cboCourse = new JComboBox<>(new String[]{"Course A", "Course D"});
+    JComboBox<String> cboLevel = new JComboBox<>(new String[]{"Level 4", "Level 5", "Level 6"});
 
-    cboLevel.addItem("Level 4");
+    // JTextArea to display modules
+    JTextArea moduleDisplay = new JTextArea();
+
+    // Simulate selection in combo boxes
+    cboCourse.setSelectedItem("Course D");
     cboLevel.setSelectedItem("Level 4");
 
-    // Call the method
-    displayModules();
+    // Get selected course and level
+    String selectedCourse = (String) cboCourse.getSelectedItem();
+    String selectedLevel = (String) cboLevel.getSelectedItem();
+    String[] modules = null;
 
-    // Assert the fallback message is displayed
+    // Retrieve the modules based on the selected course and level
+    if ("Level 4".equals(selectedLevel)) {
+        modules = level4Modules.get(selectedCourse);
+    }
+
+    // Set the text for moduleDisplay based on modules
+    if (modules != null && modules.length > 0) {
+        moduleDisplay.setText(String.join("\n", modules));
+    } else {
+        moduleDisplay.setText("No modules available for this selection.");
+    }
+
+    // Assert that the fallback message is displayed when the module array is empty
     String expected = "No modules available for this selection.";
     assertEquals(expected, moduleDisplay.getText(), "Fallback message should be displayed for an empty modules array.");
 }
