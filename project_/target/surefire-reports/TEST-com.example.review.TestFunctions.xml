@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.review.TestFunctions" time="0.975" tests="30" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.review.TestFunctions" time="0.991" tests="8" errors="2" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -14,7 +14,7 @@
     <property name="user.country" value="GB"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-5/project_/target/surefire/surefirebooter10445833623035618836.jar /Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-5/project_/target/surefire 2024-12-20T00-10-37_764-jvmRun1 surefire11787464934855858135tmp surefire_02174099792994976812tmp"/>
+    <property name="sun.java.command" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-5/project_/target/surefire/surefirebooter2777267084097475911.jar /Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-5/project_/target/surefire 2024-12-20T01-20-43_208-jvmRun1 surefire501314920242714578tmp surefire_05646169020328645925tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="com.example.review.TestFunctions"/>
@@ -32,7 +32,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-5/project_/target/surefire/surefirebooter10445833623035618836.jar"/>
+    <property name="surefire.real.class.path" value="/Users/t-hh_macacct/Downloads/COM6003_Assignment_2_folder-5/project_/target/surefire/surefirebooter2777267084097475911.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="21.0.1+12-LTS"/>
@@ -62,34 +62,40 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testInsertStringValidWithSpaceAndHyphen" classname="com.example.review.TestFunctions" time="0.154"/>
-  <testcase name="testGenerateMarksArrayCorrectValues" classname="com.example.review.TestFunctions" time="0.651"/>
-  <testcase name="testBtnBackupActionPerformed_databaseConnectionFailure" classname="com.example.review.TestFunctions" time="0"/>
-  <testcase name="testBtnResetActionPerformed_successfulReset" classname="com.example.review.TestFunctions" time="0"/>
-  <testcase name="testValidateInput_invalidStudentID" classname="com.example.review.TestFunctions" time="0"/>
-  <testcase name="testBtnBackupActionPerformed_successfulBackup" classname="com.example.review.TestFunctions" time="0"/>
-  <testcase name="testIsStudentIDExist_existingID" classname="com.example.review.TestFunctions" time="0.001"/>
+  <testcase name="testInsertStringValidWithSpaceAndHyphen" classname="com.example.review.TestFunctions" time="0.148"/>
+  <testcase name="testGenerateMarksArrayCorrectValues" classname="com.example.review.TestFunctions" time="0.654"/>
+  <testcase name="testValidateInput_invalidStudentID" classname="com.example.review.TestFunctions" time="0.002">
+    <error type="java.lang.Error"><![CDATA[java.lang.Error: 
+Unresolved compilation problems: 
+	jtxtStudentID cannot be resolved
+	jtxtEmail cannot be resolved
+	jtxtFirstname cannot be resolved
+	jtxtLastname cannot be resolved
+	jtxtAddress cannot be resolved
+	jtxtDOB cannot be resolved
+	jtxtMobile cannot be resolved
+	The method validateInput() from the type CompSciApplicationVersion1 is not visible
+
+	at com.example.review.TestFunctions.testValidateInput_invalidStudentID(TestFunctions.java:272)
+]]></error>
+  </testcase>
   <testcase name="testInsertStringValidInput" classname="com.example.review.TestFunctions" time="0.001"/>
-  <testcase name="testBtnResetActionPerformed_resultsDisplayCleared" classname="com.example.review.TestFunctions" time="0"/>
-  <testcase name="testBtnRemoveActionPerformed_successfulRemoval" classname="com.example.review.TestFunctions" time="0"/>
-  <testcase name="testBtnAddActionPerformed_duplicateStudentID" classname="com.example.review.TestFunctions" time="0"/>
-  <testcase name="testBtnCalculateActionPerformed_nullOrMissingMarks" classname="com.example.review.TestFunctions" time="0"/>
-  <testcase name="testBtnAddActionPerformed_missingFields" classname="com.example.review.TestFunctions" time="0"/>
-  <testcase name="testBtnAddActionPerformed_invalidMarksArray" classname="com.example.review.TestFunctions" time="0"/>
-  <testcase name="testValidateInput_invalidMobileNumber" classname="com.example.review.TestFunctions" time="0"/>
-  <testcase name="testDisplayModulesValidSelection" classname="com.example.review.TestFunctions" time="0.07"/>
-  <testcase name="testBtnAddActionPerformed_successfulAddition" classname="com.example.review.TestFunctions" time="0"/>
-  <testcase name="testBtnCalculateActionPerformed_degreeClassificationLevel6" classname="com.example.review.TestFunctions" time="0"/>
-  <testcase name="testBtnCalculateActionPerformed_averageCalculationLevel4And5" classname="com.example.review.TestFunctions" time="0"/>
-  <testcase name="testBtnCalculateActionPerformed_zeroMarksHandling" classname="com.example.review.TestFunctions" time="0"/>
-  <testcase name="testValidateInput_validData" classname="com.example.review.TestFunctions" time="0.001"/>
-  <testcase name="testBtnRemoveActionPerformed_databaseDeletionVerification" classname="com.example.review.TestFunctions" time="0"/>
-  <testcase name="testValidateInput_invalidDOBFormat" classname="com.example.review.TestFunctions" time="0.001"/>
-  <testcase name="testValidateInput_invalidEmailAddress" classname="com.example.review.TestFunctions" time="0"/>
-  <testcase name="testBtnRemoveActionPerformed_noRowSelected" classname="com.example.review.TestFunctions" time="0"/>
-  <testcase name="testDisplayModules_emptyModulesArray" classname="com.example.review.TestFunctions" time="0.033"/>
-  <testcase name="testGenerateMarksArraySize" classname="com.example.review.TestFunctions" time="0.04"/>
-  <testcase name="testValidateInput_invalidNameFormat" classname="com.example.review.TestFunctions" time="0.001"/>
-  <testcase name="testBtnBackupActionPerformed_emptyStudentList" classname="com.example.review.TestFunctions" time="0"/>
-  <testcase name="testIsStudentIDExist_nonExistingID" classname="com.example.review.TestFunctions" time="0.001"/>
+  <testcase name="testDisplayModulesValidSelection" classname="com.example.review.TestFunctions" time="0.107"/>
+  <testcase name="testValidateInput_validData" classname="com.example.review.TestFunctions" time="0.002">
+    <error type="java.lang.Error"><![CDATA[java.lang.Error: 
+Unresolved compilation problems: 
+	The method setStudentIDField(JTextField) is undefined for the type CompSciApplicationVersion1
+	The method setEmailField(JTextField) is undefined for the type CompSciApplicationVersion1
+	The method setFirstnameField(JTextField) is undefined for the type CompSciApplicationVersion1
+	The method setLastnameField(JTextField) is undefined for the type CompSciApplicationVersion1
+	The method setAddressField(JTextField) is undefined for the type CompSciApplicationVersion1
+	The method setDOBField(JTextField) is undefined for the type CompSciApplicationVersion1
+	The method setMobileField(JTextField) is undefined for the type CompSciApplicationVersion1
+	The method validateInput() from the type CompSciApplicationVersion1 is not visible
+
+	at com.example.review.TestFunctions.testValidateInput_validData(TestFunctions.java:239)
+]]></error>
+  </testcase>
+  <testcase name="testDisplayModules_emptyModulesArray" classname="com.example.review.TestFunctions" time="0.006"/>
+  <testcase name="testGenerateMarksArraySize" classname="com.example.review.TestFunctions" time="0.059"/>
 </testsuite>

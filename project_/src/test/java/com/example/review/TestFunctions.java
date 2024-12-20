@@ -2,9 +2,13 @@ package com.example.review;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.lang.reflect.Method;
+
+
 
 import javax.swing.JComboBox;
 import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import javax.swing.text.AttributeSet;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.PlainDocument;
@@ -12,6 +16,9 @@ import javax.swing.text.SimpleAttributeSet;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import org.junit.jupiter.api.Test;
 
 public class TestFunctions {
@@ -156,10 +163,6 @@ public class TestFunctions {
     }
 
 
-    // Existing test cases here
-
-// Additional Test Cases
-
 // Test Cases for displayModules
 @Test
 public void testDisplayModules_emptyModulesArray() {
@@ -203,138 +206,54 @@ public void testDisplayModules_emptyModulesArray() {
 
 
 
-
-
-
-// Test Cases for btnCalculateActionPerformed
-@Test
-public void testBtnCalculateActionPerformed_averageCalculationLevel4And5() {
-    // Test the calculation of total and average marks for valid Level 4 and Level 5 data.
-}
+// Test for valid data in validate input method
 
 @Test
-public void testBtnCalculateActionPerformed_zeroMarksHandling() {
-    // Ensure that zero marks for all modules are handled correctly, with the average calculated as zero.
+public void testValidateInput_validData() throws Exception {
+    // Create instance of the class
+    CompSciApplicationVersion1 app = new CompSciApplicationVersion1();
+
+    // Use reflection to access the private method
+    Method method = CompSciApplicationVersion1.class.getDeclaredMethod("validateInput");
+    method.setAccessible(true);  // Make the private method accessible
+
+    // Call the method
+    boolean isValid = (boolean) method.invoke(app);
+
+    // Assert the result
+    assertTrue(isValid, "Valid input should return true.");
 }
 
-@Test
-public void testBtnCalculateActionPerformed_degreeClassificationLevel6() {
-    // Test various edge cases for Level 6 to ensure correct degree classification.
-    // Example: Marks average is exactly on the boundary (e.g., 70, 65, 60, 40).
-}
 
-@Test
-public void testBtnCalculateActionPerformed_nullOrMissingMarks() {
-    // Test cases where some marks are not selected (null) and ensure the behavior is appropriate.
-}
 
-// Test Cases for btnAddActionPerformed
-@Test
-public void testBtnAddActionPerformed_successfulAddition() {
-    // Test successful addition of a student with valid input.
-}
 
-@Test
-public void testBtnAddActionPerformed_duplicateStudentID() {
-    // Ensure an appropriate error message is displayed when a duplicate Student ID is entered.
-}
 
-@Test
-public void testBtnAddActionPerformed_missingFields() {
-    // Validate that the method does not proceed if required fields are missing or invalid.
-}
 
-@Test
-public void testBtnAddActionPerformed_invalidMarksArray() {
-    // Test behavior when marks array contains invalid or missing values.
-}
 
-// Test Cases for validateInput
-@Test
-public void testValidateInput_validData() {
-    // Provide fully valid data and ensure the method returns true.
-}
+
+
 
 @Test
 public void testValidateInput_invalidStudentID() {
-    // Test with incorrectly formatted Student IDs, such as missing "STID" prefix or incorrect length.
-}
+    // Simulate filling out the fields with invalid student ID
+    jtxtStudentID.setText("12345");  // Invalid format (should be "STID####")
+    jtxtEmail.setText("student@example.com");
+    jtxtFirstname.setText("John");
+    jtxtLastname.setText("Doe");
+    jtxtAddress.setText("123 Main Street, City");
+    jtxtDOB.setText("01/01/2000");
+    jtxtMobile.setText("07123456789");
 
-@Test
-public void testValidateInput_invalidEmailAddress() {
-    // Test various invalid email formats (e.g., missing @, missing domain).
-}
+    // Create an instance of CompSciApplicationVersion1 and call the validateInput method
+    CompSciApplicationVersion1 app = new CompSciApplicationVersion1();
 
-@Test
-public void testValidateInput_invalidNameFormat() {
-    // Test names containing non-alphabetic characters or not capitalized.
-}
+    // Call the validateInput method to check the validation
+    boolean isValid = app.validateInput();
 
-@Test
-public void testValidateInput_invalidDOBFormat() {
-    // Ensure validateInput catches incorrect formats for the date of birth.
-}
-
-@Test
-public void testValidateInput_invalidMobileNumber() {
-    // Test mobile numbers not conforming to the UK format.
-}
-
-// Test Cases for btnRemoveActionPerformed
-@Test
-public void testBtnRemoveActionPerformed_successfulRemoval() {
-    // Test removal of a valid student entry.
-}
-
-@Test
-public void testBtnRemoveActionPerformed_noRowSelected() {
-    // Ensure the correct error message is displayed if no row is selected.
-}
-
-@Test
-public void testBtnRemoveActionPerformed_databaseDeletionVerification() {
-    // Test that the corresponding database entry is removed for the deleted student.
-}
-
-// Test Cases for btnBackupActionPerformed
-@Test
-public void testBtnBackupActionPerformed_successfulBackup() {
-    // Ensure all student data is correctly inserted into the database.
-}
-
-@Test
-public void testBtnBackupActionPerformed_emptyStudentList() {
-    // Test that the method handles an empty student list gracefully.
-}
-
-@Test
-public void testBtnBackupActionPerformed_databaseConnectionFailure() {
-    // Simulate a database connection failure and verify the error handling mechanism.
-}
-
-// Test Cases for btnResetActionPerformed
-@Test
-public void testBtnResetActionPerformed_successfulReset() {
-    // Test that all fields and dropdowns are reset to their initial states.
-}
-
-@Test
-public void testBtnResetActionPerformed_resultsDisplayCleared() {
-    // Verify that the results display is also cleared during reset.
-}
-
-// Test Cases for isStudentIDExist
-@Test
-public void testIsStudentIDExist_existingID() {
-    // Test with a Student ID already present in the list.
-}
-
-@Test
-public void testIsStudentIDExist_nonExistingID() {
-    // Ensure the method correctly returns false when the Student ID is not found.
+    // Assert that the validation returns false for an invalid Student ID
+    assertFalse(isValid, "Invalid student ID should return false.");
 }
 
 
 
-    
 }
