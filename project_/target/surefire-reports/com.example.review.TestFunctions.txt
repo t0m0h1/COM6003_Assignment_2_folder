@@ -1,4 +1,17 @@
 -------------------------------------------------------------------------------
 Test set: com.example.review.TestFunctions
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.97 s - in com.example.review.TestFunctions
+Tests run: 30, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.984 s <<< FAILURE! - in com.example.review.TestFunctions
+com.example.review.TestFunctions.testDisplayModules_emptyModulesArray  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	level4Modules cannot be resolved
+	cboCourse cannot be resolved
+	cboCourse cannot be resolved
+	cboLevel cannot be resolved
+	cboLevel cannot be resolved
+	The method displayModules() is undefined for the type TestFunctions
+	moduleDisplay cannot be resolved
+
+	at com.example.review.TestFunctions.testDisplayModules_emptyModulesArray(TestFunctions.java:166)
+

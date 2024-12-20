@@ -161,19 +161,29 @@ public class TestFunctions {
 
 // Test Cases for displayModules
 @Test
-public void testDisplayModules_validCourseAndLevel() {
-    // Test if the correct modules are displayed for a valid course and level selection.
+public void testDisplayModules_emptyModulesArray() {
+    // Add a course with an empty modules array
+    level4Modules.put("Course D", new String[]{});
+
+    // Set up valid selections
+    cboCourse.addItem("Course D");
+    cboCourse.setSelectedItem("Course D");
+
+    cboLevel.addItem("Level 4");
+    cboLevel.setSelectedItem("Level 4");
+
+    // Call the method
+    displayModules();
+
+    // Assert the fallback message is displayed
+    String expected = "No modules available for this selection.";
+    assertEquals(expected, moduleDisplay.getText(), "Fallback message should be displayed for an empty modules array.");
 }
 
-@Test
-public void testDisplayModules_invalidSelection() {
-    // Test when an invalid course or level is selected, ensuring the output is "No modules available for this selection."
-}
 
-@Test
-public void testDisplayModules_nullOrEmptySelection() {
-    // Test if null or empty selections for course or level are handled gracefully without crashing.
-}
+
+
+
 
 // Test Cases for btnCalculateActionPerformed
 @Test
